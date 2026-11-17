@@ -1,55 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>FAFKA</title>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>fafik · fafa-rafa</title>
 <style>
-body {
-  margin: 0;
-  background: #0a0a0a;
-  color: #00ff9f;
-  font-family: monospace;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.container {
-  text-align: left;
-  border-left: 2px solid #00ff9f;
-  padding-left: 20px;
-}
-
-h1 {
-  font-size: 40px;
-  letter-spacing: 2px;
-  text-shadow: 0 0 10px #00ff9f;
-}
-
-p {
-  opacity: 0.7;
-}
-
-.glow {
-  animation: flicker 2s infinite;
-}
-
-@keyframes flicker {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
-}
+:root{--bg:#0f1318;--card:#171d25;--text:#e8edf3;--muted:#93a1b3;--accent:#4ade80;--line:#273140;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f8fa;--card:#fff;--text:#1b2430;--muted:#5b6878;--accent:#128a4a;--line:#dde3ea;color-scheme:light}}
+:root[data-theme="light"]{--bg:#f6f8fa;--card:#fff;--text:#1b2430;--muted:#5b6878;--accent:#128a4a;--line:#dde3ea;color-scheme:light}
+:root[data-theme="dark"]{--bg:#0f1318;--card:#171d25;--text:#e8edf3;--muted:#93a1b3;--accent:#4ade80;--line:#273140;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:48px 20px 64px}
+.hero{text-align:center;padding:24px 0 40px}
+.hero img{width:112px;height:112px;border-radius:50%;border:3px solid var(--accent)}
+h1{margin:16px 0 4px;font-size:2.2rem}
+.handle{color:var(--muted)}
+.badge{display:inline-block;margin:14px 0 6px;padding:4px 14px;border:1px solid var(--line);border-radius:99px;background:var(--card);font-size:.95rem}
+.stats{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:18px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 18px;min-width:96px}
+.stat b{display:block;font-size:1.3rem;color:var(--accent)}
+.stat span{font-size:.8rem;color:var(--muted)}
+.btn{display:inline-block;margin-top:22px;padding:10px 22px;border-radius:10px;background:var(--accent);color:#08140d;font-weight:600;text-decoration:none}
+h2{font-size:1.4rem;margin:40px 0 16px}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:22px}
+.proj h3{margin:0 0 4px;font-size:1.35rem}
+.proj h3 a{color:var(--text);text-decoration:none}
+.proj h3 a:hover{color:var(--accent)}
+.desc{color:var(--muted);margin:0 0 12px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tag{font-size:.78rem;padding:2px 10px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.tag.hl{color:var(--accent);border-color:var(--accent)}
+h4{margin:18px 0 6px;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600}
+ol,ul{margin:6px 0;padding-left:22px}
+code{background:var(--bg);padding:1px 6px;border-radius:5px;font-size:.88em}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:3px 12px;font-size:.9rem}
+.links{margin-top:18px}
+.links a{color:var(--accent);text-decoration:none;font-weight:600;margin-right:16px}
+footer{text-align:center;color:var(--muted);font-size:.85rem;margin-top:40px}
+footer a{color:var(--accent)}
 </style>
 </head>
-
 <body>
-  <div class="container glow">
-    <h1>WBSITE</h1>
-    <p>system: online</p>
-    <p>status: watching</p>
-    <p>user: anonymous</p>
+<div class="wrap">
+
+<header class="hero">
+  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23171d25'/%3E%3Ctext x='50' y='64' font-size='46' text-anchor='middle' fill='%234ade80' font-family='monospace'%3EFR%3C/text%3E%3C/svg%3E" alt="fafa-rafa avatar">
+  <h1>fafik</h1>
+  <div class="handle">@fafa-rafa</div>
+  <div class="badge">💹 new project upcoming</div>
+  <p>just a young dev. new projects soon.</p>
+  <div class="stats">
+    <div class="stat"><b>5</b><span>repositories</span></div>
+    <div class="stat"><b>27</b><span>stars given</span></div>
+    <div class="stat"><b>8</b><span>following</span></div>
   </div>
+  <a class="btn" href="https://github.com/fafa-rafa" target="_blank" rel="noopener">View on GitHub</a>
+</header>
+
+<h2>Projects</h2>
+
+<article class="proj">
+  <h3><a href="https://github.com/fafa-rafa/PockPlay" target="_blank" rel="noopener">PockPlay</a></h3>
+  <p class="desc">A simple two button game console. A pocket console for the ESP32-C3 SuperMini with a 0.96" SSD1306 OLED and just two buttons (UP / DOWN).</p>
+  <div class="tags"><span class="tag hl">C++</span><span class="tag">GPL-3.0</span><span class="tag">ESP32-C3</span><span class="tag">OLED</span></div>
+
+  <h4>Games</h4>
+  <div class="chips"><span class="chip">CalcDodger</span><span class="chip">Dino Run</span><span class="chip">Pong</span><span class="chip">Frogger</span><span class="chip">Flappy</span><span class="chip">Snake</span><span class="chip">Breakout</span></div>
+  <h4>Tool</h4>
+  <div class="chips"><span class="chip">TV-B-Gone (IR power-off blaster, USA/Canada and Europe/Asia code sets)</span></div>
+  <p class="desc" style="margin-top:10px">High scores are saved to flash and shown in the menu.</p>
+
+  <h4>Hardware</h4>
+  <div class="scroll"><table>
+    <tr><th>Part</th><th>Connection</th></tr>
+    <tr><td>OLED SDA / SCL</td><td>GPIO5 / GPIO6 (3V3, GND)</td></tr>
+    <tr><td>UP button</td><td>GPIO3 to GND</td></tr>
+    <tr><td>DOWN button</td><td>GPIO4 to GND</td></tr>
+    <tr><td>Passive buzzer (optional)</td><td>GPIO10 to GND</td></tr>
+  </table></div>
+  <p class="desc" style="margin-top:8px"><b>Power:</b> 1S LiPo through a TP4056 protection module to the 5V pin via a switch. Never plug USB into the SuperMini while the battery is connected.</p>
+
+  <h4>Install: option 1, esptool by spacehuhn</h4>
+  <ol>
+    <li>Go to the releases page and download the binary file</li>
+    <li>Open <code>esp.huhn.me</code> and connect the ESP</li>
+    <li>Upload the binary, flash, wait, reboot. Done!</li>
+  </ol>
+  <h4>Install: option 2, build</h4>
+  <ol>
+    <li>Install the Arduino IDE and the ESP32 core 3.x (needed for <code>tone()</code> and the LEDC API)</li>
+    <li>Install the libraries Adafruit SSD1306 and Adafruit GFX</li>
+    <li>Open <code>PockPlay_V0_2/PockPlay_V0_2.ino</code>, select ESP32C3 Dev Module, enable USB CDC On Boot for serial output, and upload</li>
+  </ol>
+
+  <h4>Controls</h4>
+  <ul>
+    <li><b>Menu:</b> UP / DOWN scroll, press both to start</li>
+    <li><b>In game:</b> hold both for about 0.7 s to return to the menu</li>
+    <li><b>TV-B-Gone:</b> UP = USA/Canada codes, DOWN = Europe/Asia codes, hold both to stop</li>
+  </ul>
+  <div class="scroll"><table>
+    <tr><th>Game</th><th>UP</th><th>DOWN</th></tr>
+    <tr><td>CalcDodger</td><td>top lane</td><td>bottom lane</td></tr>
+    <tr><td>Dino Run</td><td>jump</td><td>duck / fast fall</td></tr>
+    <tr><td>Pong</td><td>paddle up</td><td>paddle down</td></tr>
+    <tr><td>Frogger</td><td>hop forward</td><td>hop back</td></tr>
+    <tr><td>Flappy</td><td>flap</td><td>dive</td></tr>
+    <tr><td>Snake</td><td>turn left</td><td>turn right</td></tr>
+    <tr><td>Breakout</td><td>paddle up</td><td>paddle down</td></tr>
+  </table></div>
+  <div class="links"><a href="https://github.com/fafa-rafa/PockPlay" target="_blank" rel="noopener">Repository →</a></div>
+</article>
+
+<article class="proj">
+  <h3><a href="https://github.com/fafa-rafa/HackGame-Vega" target="_blank" rel="noopener">HackGame-Vega</a></h3>
+  <p class="desc">A custom firmware for the HackHeld Vega II by Spacehuhn.</p>
+  <div class="tags"><span class="tag hl">C++</span><span class="tag">MIT</span><span class="tag">Firmware</span></div>
+  <h4>Games</h4>
+  <div class="chips"><span class="chip">Snake</span><span class="chip">Breakout</span><span class="chip">Shooter</span><span class="chip">more in the works</span></div>
+  <h4>Install</h4>
+  <ol>
+    <li>Download the latest firmware from the releases page</li>
+    <li>Visit <code>esp.huhn.me</code></li>
+    <li>Connect and drag the files</li>
+    <li>Click flash, and you’re done</li>
+  </ol>
+  <div class="links"><a href="https://github.com/fafa-rafa/HackGame-Vega" target="_blank" rel="noopener">Repository →</a></div>
+</article>
+
+<footer>Built from <a href="https://github.com/fafa-rafa" target="_blank" rel="noopener">github.com/fafa-rafa</a> · more projects soon</footer>
+</div>
 </body>
 </html>
